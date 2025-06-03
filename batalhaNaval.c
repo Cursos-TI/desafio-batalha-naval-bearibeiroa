@@ -17,13 +17,17 @@ int main() {
     tabuleiro[2][4] = 3;
     tabuleiro[3][4] = 3;
     // Sugestão: Utilize `printf` para exibir as coordenadas de cada parte dos navios.
-    printf("Tabuleiro com os navios:\n");
-    for(int i = 0; i < 5; i++) {
-        for(int j = 0; j < 5; j++) {
-            printf("%d ", tabuleiro[i][j]);
-        }
-        printf("\n");
-    }
+    // Exibindo coordenadas do navio horizontal
+    printf("Coordenadas do navio horizontal:\n");
+    printf("Parte 1: [%d,%d]\n", 0, 1);
+    printf("Parte 2: [%d,%d]\n", 0, 2);
+    printf("Parte 3: [%d,%d]\n", 0, 3);
+
+    // Exibindo coordenadas do navio vertical
+    printf("\nCoordenadas do navio vertical:\n");
+    printf("Parte 1: [%d,%d]\n", 2, 4);
+    printf("Parte 2: [%d,%d]\n", 3, 4);
+
 
 
     // Nível Aventureiro - Expansão do Tabuleiro e Posicionamento Diagonal
