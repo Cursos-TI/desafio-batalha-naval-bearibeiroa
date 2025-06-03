@@ -77,9 +77,62 @@ int main() {
     int octaedro[5][5] = {{0}};
 
     // Sugestão: Utilize estruturas de repetição aninhadas para preencher as áreas afetadas por essas habilidades no tabuleiro.
-    
+    // Preenchendo o padrão do Cone (apontando para cima)
+    cone[4][2] = 1;    // Ponto inicial
+    cone[3][1] = 1;    // Expansão
+    cone[3][2] = 1;
+    cone[3][3] = 1;
+    cone[2][0] = 1;    // Expansão maior
+    cone[2][1] = 1;
+    cone[2][2] = 1;
+    cone[2][3] = 1;
+    cone[2][4] = 1;
+
+    // Preenchendo o padrão da Cruz
+    cruz[0][2] = 1;    // Vertical
+    cruz[1][2] = 1;
+    cruz[2][2] = 1;    // Centro
+    cruz[3][2] = 1;
+    cruz[4][2] = 1;
+    cruz[2][0] = 1;    // Horizontal
+    cruz[2][1] = 1;
+    cruz[2][3] = 1;
+    cruz[2][4] = 1;
+
+    // Preenchendo o padrão do Octaedro (formato diamante)
+    octaedro[0][2] = 1;    // Topo
+    octaedro[1][1] = 1;    // Meio superior
+    octaedro[1][2] = 1;
+    octaedro[1][3] = 1;
+    octaedro[2][0] = 1;    // Centro
+    octaedro[2][1] = 1;
+    octaedro[2][2] = 1;
+    octaedro[2][3] = 1;
+    octaedro[2][4] = 1;
+    octaedro[3][1] = 1;    // Meio inferior
+    octaedro[3][2] = 1;
+    octaedro[3][3] = 1;
+    octaedro[4][2] = 1;    // Base
+
     
     // Sugestão: Exiba o tabuleiro com as áreas afetadas, utilizando 0 para áreas não afetadas e 1 para áreas atingidas.
+
+    void exibir_padrao(int matriz[5][5], const char* nome) {
+        printf("\nPadrão %s:\n", nome);
+        for(int i = 0; i < 5; i++) {
+            for(int j = 0; j < 5; j++) {
+                printf("%d ", matriz[i][j]);
+            }
+            printf("\n");
+        }
+    }
+
+    // Exibindo todos os padrões
+    printf("Representação das Habilidades Especiais (1 = área de efeito, 0 = sem efeito)\n");
+    exibir_padrao(cone, "Cone");
+    exibir_padrao(cruz, "Cruz");
+    exibir_padrao(octaedro, "Octaedro");
+
 
     // Exemplos de exibição das habilidades:
     // Exemplo para habilidade em cone:
